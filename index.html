@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="colorlib">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>SIG RESTORAN & CAFE KOTA DEPOK</title>
+
+	<link rel="icon" href="admin/img/dpk.png">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+	<!--
+			CSS
+			============================================= -->
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="travelista-master/css/linearicons.css">
+	<link rel="stylesheet" href="travelista-master/css/font-awesome.min.css">
+	<link rel="stylesheet" href="travelista-master/css/bootstrap.css">
+	<link rel="stylesheet" href="travelista-master/css/magnific-popup.css">
+	<link rel="stylesheet" href="travelista-master/css/jquery-ui.css">
+	<link rel="stylesheet" href="travelista-master/css/nice-select.css">
+	<link rel="stylesheet" href="travelista-master/css/animate.min.css">
+	<link rel="stylesheet" href="travelista-master/css/owl.carousel.css">
+	<link rel="stylesheet" href="travelista-master/css/main.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<header id="header">
+		<div class="header-top">
+			<div class="container">
+				<div class="row align-items-center">
+
+
+				</div>
+			</div>
+		</div>
+		<div class="container main-menu">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="index.php"><img src="admin/img/dpk.png" width="50px" height="50px" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li><a href="index.php">Home</a></li>
+						<li><a href="data_wisata.php">Lokasi Restoran & Cafe</a></li>
+						<li><a href="admin/login.php">Login Admin</a></li>
+
+					</ul>
+				</nav><!-- #nav-menu-container -->
+			</div>
+		</div>
+	</header><!-- #header -->
+	<section class="banner-area relative">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+		  <div class="row fullscreen align-items-center justify-content-between">
+			<div class="col-lg-6 col-md-6 banner-left">
+			  <h6 class="text-white">SISTEM INFORMASI GEOGRAFIS RESTORAN & CAFE</h6>
+			  <h1 class="text-white">KOTA DEPOK</h1>
+			  <p class="text-white">
+				Sistem informasi ini merupakan aplikasi pemetaan geografis restoran & cafe di wilayah kota Depok.
+			  </p>
+			  <a href="#peta_wisata" class="primary-btn text-uppercase">Lihat Detail</a>
+			</div>
+	  
+		  </div>
+		</div>
+		</div>
+	  </section>
+	  <!-- End banner Area -->
+	  
+	  
+	  <main id="main">
+	  
+	  
+	  
+	  
+		<!-- Start about-info Area -->
+		<section class="price-area section-gap">
+	  
+		  <section id="peta_wisata" class="about-info-area section-gap">
+			<div class="container">
+	  
+			  <div class="title text-center">
+				<h1 class="mb-10">Peta Lokasi Restoran & Cafe</h1>
+				<br>
+			  </div>
+	  
+			  <div class="row align-items-center">
+	  
+				<div id="map" style="width:100%;height:480px;"></div>
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEBNXjwQAHymEJOZMwwTKqX2ypNNnj0Ws "></script>
+	  
+				<script type="text/javascript">
+				  function initialize() {
+	  
+					var mapOptions = {
+					  zoom: 10.2,
+					  center: new google.maps.LatLng(-6.580528, 106.777892),
+					  disableDefaultUI: false
+					};
+	  
+					var mapElement = document.getElementById('map');
+	  
+					var map = new google.maps.Map(mapElement, mapOptions);
+	  
+					setMarkers(map, officeLocations);
+	  
+				  }
+	  
+				  var officeLocations = [
+					[1, 'McDonald`s Kartini Depok', 'Jl. Raya Citayam, RT.3/RW.2, Depok, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16431',  106.81763000524256, -6.408613047681637],
+					[2, 'Steak Moen-Moen', 'Jl. Kartini No.3, Depok, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16431', 106.81870606755149, -6.404881345268048],
+					[38, 'JPW Cafe & Garden', 'Ruko Verbena D Jl. Boulevard Grand Depok City No.16, Tirtajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412', 106.82135381201581, -6.41329668724731],
+					[39, 'KFC Grand Depok City', '', 106.82097807135497, -6.414975249954562],
+					[40, 'Meet Up Cafe Sawangan', 'Jl. Raya Sawangan No.19, Pancoran MAS, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16436', 106.81044660493245, -6.398521677332364],
+					[41, 'Mie Gacoan Depok', 'Jl. Margonda Raya No.23, Depok, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16431', 106.8214461266841, -6.3969511768086775 ],
+					[54, 'Shabu Hachi Depok', 'Jl. Margonda No.2, Depok, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16431', 106.82421054561708, -6.3930910269671655],
+								];
+	  
+				  function setMarkers(map, locations) {
+					var globalPin = 'img/marker.png';
+	  
+					for (var i = 0; i < locations.length; i++) {
+	  
+					  var office = locations[i];
+					  var myLatLng = new google.maps.LatLng(office[4], office[3]);
+					  var infowindow = new google.maps.InfoWindow({
+						content: contentString
+					  });
+	  
+					  var contentString =
+						'<div id="content">' +
+						'<div id="siteNotice">' +
+						'</div>' +
+						'<h5 id="firstHeading" class="firstHeading">' + office[1] + '</h5>' +
+						'<div id="bodyContent">' +
+						'<a href=detail.php?id_wisata=' + office[0] + '>Info Detail</a>' +
+						'</div>' +
+						'</div>';
+	  
+					  var marker = new google.maps.Marker({
+						position: myLatLng,
+						map: map,
+						title: office[1],
+						icon: 'img/markermap.png'
+					  });
+	  
+					  google.maps.event.addListener(marker, 'click', getInfoCallback(map, contentString));
+					}
+				  }
+	  
+				  function getInfoCallback(map, content) {
+					var infowindow = new google.maps.InfoWindow({
+					  content: content
+					});
+					return function() {
+					  infowindow.setContent(content);
+					  infowindow.open(map, this);
+					};
+				  }
+	  
+				  initialize();
+				</script>
+	  
+			  </div>
+	  
+	  
+			</div>
+		  </section>
+		  <!-- End about-info Area -->
+	  
+	  
+		  <!-- Start price Area -->
+	  
+		  <div class="container">
+			<div class="row d-flex justify-content-center">
+			  <div class="menu-content pb-70 col-lg-8">
+				<div class="title text-center">
+				  <h1 class="mb-10">Jangkauan Peta</h1>
+				  <p>Aplikasi pemetaan geografis restoran & cafe di Kota Depok ini memuat informasi dan lokasi dari restoran & cafe di Kota Depok. Pemetaan diambil dari data lokasi Google Maps. Aplikasi ini memuat sejumlah informasi mengenai :
+				  </p>
+				</div>
+			  </div>
+			</div>
+	  
+			<!-- End other-issue Area -->
+	  
+		  </div>
+		  </div> <!-- ======= Counts Section ======= -->
+		  <section id="counts">
+			<div class="container">
+			  <div class="title text-center">
+				<h1 class="mb-10">Jumlah Restoran & Cafe</h1>
+				<br>
+			  </div>
+			  <div class="row d-flex justify-content-center">
+	  
+	  
+				
+				<div class="text-center">
+				  <h1><span data-toggle="counter-up">7</span></h1>
+				  <br>
+				</div>
+				
+	  
+			  </div>
+	  
+			</div>
+		  </section><!-- End Counts Section -->
+		  </div>
+		</section>
+		<!-- End testimonial Area -->
+	  
+	  
+		
+				  <!-- start footer Area -->		
+				  <footer class="footer-area section-gap">
+					  <div class="container">
+	  
+						  <div class="row">
+						  
+						  <div class="row footer-bottom d-flex justify-content-between align-items-center">
+							  <p class="col-lg-8 col-sm-12 footer-text m-0">
+							  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved || Sistem Informasi Geografis</i> by Bagas Aditya</a>
+	  </p>
+							  <div class="col-lg-4 col-sm-12 footer-social">
+								  <a href="#"><i class="fa fa-facebook"></i></a>
+								  <a href="#"><i class="fa fa-instagram"></i></a>
+							  </div>
+						  </div>
+					  </div>
+				  </footer>
+				  <!-- End footer Area -->	
+	  
+				  <script src="travelista-master/js/vendor/jquery-2.2.4.min.js"></script>
+				  <script src="travelista-master/js/popper.min.js"></script>
+				  <script src="travelista-master/js/vendor/bootstrap.min.js"></script>			
+				  <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>	-->	
+				   <script src="travelista-master/js/jquery-ui.js"></script>					
+					<script src="travelista-master/js/easing.min.js"></script>			
+				  <script src="travelista-master/js/hoverIntent.js"></script>
+				  <script src="travelista-master/js/superfish.min.js"></script>	
+				  <script src="travelista-master/js/jquery.ajaxchimp.min.js"></script>
+				  <script src="travelista-master/js/jquery.magnific-popup.min.js"></script>						
+				  <script src="travelista-master/js/jquery.nice-select.min.js"></script>					
+				  <script src="travelista-master/js/owl.carousel.min.js"></script>							
+				  <script src="travelista-master/js/mail-script.js"></script>	
+				  <script src="travelista-master/js/main.js"></script>	
+				  
+				  
+						  <!-- Vendor JS Files -->
+						  <script src="assets/vendor/jquery/jquery.min.js"></script>
+						  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+						  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+						  <script src="assets/vendor/php-email-form/validate.js"></script>
+						  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+						  <script src="assets/vendor/counterup/counterup.min.js"></script>
+						  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+						  <script src="assets/vendor/venobox/venobox.min.js"></script>
+						  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+						  <script src="assets/vendor/aos/aos.js"></script>
+						  
+						  <!-- Template Main JS File -->
+						  <script src="assets/js/main.js"></script>
+						  <script src="js/bootstrap.min.js"></script>
+						  <script src="js/bootstrap-hover-dropdown.js"></script>
+						  <script src="js/script.js"></script>
+						  <script src="js/jquery.dataTables.min.js"></script>
+						  <script src="js/datatable-bootstrap.js"></script>
+	</body>
+</html>
